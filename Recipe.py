@@ -5,8 +5,8 @@ id = hiddenkeys.app_id
 key = hiddenkeys.app_key
 
 
-def recipe_database(ingredient, health_labels):
-    url = f'https://api.edamam.com/search?q={ingredient}&app_id={id}&app_key={key}&Health={health_labels}'
+def recipe_database(ingredient, health_labels,diet_labels):
+    url = f'https://api.edamam.com/search?q={ingredient}&app_id={id}&app_key={key}&Health={health_labels}&Diet={diet_labels}'
 
     response = requests.get(url)
     found_recipes = response.json()
@@ -16,10 +16,11 @@ def recipe_database(ingredient, health_labels):
 def recipe_search():
     ingredient_criteria = input('What ingredient would you like to include in the recipe? ')
     health_criteria = input('Do you have any specific dietary and/or allergy-free requests? ')
+    diet_criteria = input('Any nutrition requests? ')
 
-    answer = recipe_database(ingredient_criteria, health_criteria)
+    answers = recipe_database(ingredient_criteria, health_criteria, diet_criteria)
 
-    print(answer)
+    print(answers)
 
 
 recipe_search()
