@@ -1,5 +1,7 @@
 # Recipe-Search
 
+Thank you to Edamam for providing API data for this programm
+
 Using the Edamam Recipe Search API, this python project tailors the users nutritional, dietary and health needs when recommending an array of recipes. These are later stored to a file as an archive for later use which more can be added.
 
 The parameters - health_labels & diet_labels within the function named recipe_database refers to the following values a user can enter upon input prompt:
