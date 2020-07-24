@@ -32,7 +32,9 @@ def recipe_search():
 
            weight = recipe["totalWeight"]
            formatted_weight = f'{weight:1.2f}'
-           text_file.write(f'Total weight of this meal: {formatted_weight}g\n')
+           text_file.write(f'Total weight of this meal: {formatted_weight}g\n\n')
+
+    print(f'Feeling Peckish? Check Your Inventory!')
 
 
 
