@@ -20,7 +20,9 @@ def recipe_search():
 
     answers = recipe_database(ingredient_criteria, health_criteria, diet_criteria)
 
-    print(answers)
+    for answer in answers:
+        recipe = answer["recipe"]
+        print(recipe["label"])
 
 
 recipe_search()
