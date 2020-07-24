@@ -23,7 +23,7 @@ def recipe_search():
     with open('recipe-inventory.txt', 'w+') as text_file:
         for answer in answers:
            recipe = answer["recipe"]
-           text_file.write(f'{recipe["label"]}')
+           text_file.write(f'{recipe["label"].upper()}\n')
 
 
 
