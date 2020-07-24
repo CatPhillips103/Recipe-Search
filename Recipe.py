@@ -20,9 +20,12 @@ def recipe_search():
 
     answers = recipe_database(ingredient_criteria, health_criteria, diet_criteria)
 
-    for answer in answers:
-        recipe = answer["recipe"]
-        print(recipe["label"])
+    with open('recipe-inventory.txt', 'w+') as text_file:
+        for answer in answers:
+           recipe = answer["recipe"]
+           text_file.write(f'{recipe["label"]}')
+
+
 
 
 recipe_search()
