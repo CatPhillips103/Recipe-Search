@@ -34,14 +34,10 @@ def recipe_search():
            formatted_weight = f'{weight:1.2f}'
            text_file.write(f'Total weight of this meal: {formatted_weight}g\n\n')
 
+           for food_supplies in answers:
+               food = food_supplies["recipe"]["ingredientLines"]
+               text_file.write(f'{food[0]}\n\n')
+
     print(f'Feeling Peckish? Check Your Inventory!')
-
-
-
-
-
-
-
-
 
 recipe_search()
